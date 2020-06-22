@@ -16,7 +16,7 @@ while swap:
             soup = bs4.BeautifulSoup(req.text, "html.parser")
 
             ul_tags = soup.find_all("ul", attrs={"class": "c-listing__items"})
-            li_tags = ul_tags[1].find_all("li")
+            li_tags = ul_tags[0].find_all("li")
 
             for li_tag in li_tags:
                 div_tag = li_tag.find("div")
